@@ -1,0 +1,280 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= PAGE WRAPPER ================= */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.topbar {
+  height: 70px;
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.topbar h4 {
+  margin: 0;
+  color: white;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background-color: #1f2937;
+  padding: 10px;
+  min-height: calc(100vh - 70px);
+}
+
+/* Remove white background from Dashmenu card */
+.sidebar .card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Sidebar buttons */
+.sidebar .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ================= CARD ================= */
+.card {
+  border-radius: 10px;
+}
+
+/* ================= TABLE ================= */
+table {
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+/* ================= MODAL FIX ================= */
+.modal-content {
+  border-radius: 12px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  border-radius: 6px !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+}
+/* Remove card look */
+.sidebar .card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Make buttons look like menu items */
+.sidebar .btn {
+  background: transparent !important;
+  border: none !important;
+  text-align: left;
+  padding: 12px 15px;
+  margin-top: 5px;
+  color: #d1d5db !important;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.sidebar .btn:hover {
+  background-color: #374151 !important;
+  color: white !important;
+}
+
+/* Remove bootstrap outline styles */
+.sidebar .btn-outline-primary,
+.sidebar .btn-outline-success,
+.sidebar .btn-outline-warning {
+  border: none !important;
+}
+
+/* ================= CUSTOM BUTTON THEME ================= */
+
+/* Add Record (Green Premium) */
+.btn-success {
+  background-color: #16a34a !important;
+  border: none !important;
+}
+
+.btn-success:hover {
+  background-color: #15803d !important;
+}
+
+/* View Button (Blue Modern) */
+.btn-info {
+  background-color: #2563eb !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-info:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Delete Button (Soft Red) */
+.btn-danger {
+  background-color: #dc2626 !important;
+  border: none !important;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c !important;
+}
+
+/* Edit Button (Orange Modern) */
+.btn-warning {
+  background-color: #f59e0b !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-warning:hover {
+  background-color: #d97706 !important;
+}
+
+/* Keep action buttons side by side */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.action-buttons .btn {
+  padding: 4px 10px !important;
+  font-size: 13px !important;
+}
+
+.dashboard-card {
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.line-chart {
+  display: flex;
+  align-items: flex-end;
+  height: 150px;
+  gap: 15px;
+}
+
+.line-bar {
+  width: 40px;
+  background: #007bff;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.line-bar span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 10px;
+  color: white;
+}
+
+.donut {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #28a745 0% 70%,
+    #dee2e6 70% 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.donut-center {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.line-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 200px;
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-bar {
+  width: 40px;
+  background-color: #0d6efd;
+  border-radius: 5px 5px 0 0;
+}
+
+.bar-label {
+  margin-top: 8px;
+  font-size: 12px;
+  text-align: center;
+}
