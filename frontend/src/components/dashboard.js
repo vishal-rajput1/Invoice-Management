@@ -22,7 +22,7 @@ function Dashboard() {
   }, []);
 
   const fetchMembers = () => {
-    fetch("http://localhost:5000/getteamdata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getteamdata")
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data.message)) {
@@ -32,7 +32,7 @@ function Dashboard() {
   };
 
   const fetchCourses = () => {
-    fetch("http://localhost:5000/getcoursedata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getcoursedata")
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data.message)) {
@@ -42,7 +42,7 @@ function Dashboard() {
   };
 
   const fetchInvoices = () => {
-    fetch("http://localhost:5000/getinvoicedata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getinvoicedata")
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data.message)) {

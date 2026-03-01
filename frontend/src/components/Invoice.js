@@ -163,7 +163,7 @@ const fetchcourses = () => {
 
   // ================= FETCH =================
   const fetchinvoice = () => {
-    fetch("http://localhost:5000/getinvoicedata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getinvoicedata")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data.message)) {
@@ -228,7 +228,7 @@ const fetchcourses = () => {
 
   if (!window.confirm("Are you sure?")) return;
 
-  fetch(`http://localhost:5000/deleteinvoicedata/${id}`, {
+  fetch(`https://invoice-management-2-s4qi.onrender.com/deleteinvoicedata/${id}`, {
     method: "DELETE"
   })
     .then((res) => res.json())
@@ -258,7 +258,7 @@ const fetchcourses = () => {
     
     console.log("Updating:",selectedinvoice);
     fetch(
-      `http://localhost:5000/updateinvoicedata/${updateinvoice.id}`,
+      `https://invoice-management-2-s4qi.onrender.com/${updateinvoice.id}`,
       {
         method: "PUT",
         headers: {

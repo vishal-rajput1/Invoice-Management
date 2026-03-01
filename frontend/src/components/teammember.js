@@ -23,7 +23,7 @@ function Teammember() {
 
   // ================= FETCH Member =================
   const fetchmember = () => {
-    fetch("http://localhost:5000/getteamdata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getteamdata")
       .then((res) => res.json())
       .then((data) => {
   if (Array.isArray(data.message)) {
@@ -58,7 +58,7 @@ function Teammember() {
     id: Number(newMember.id)   // convert string → integer
   };
     
-    fetch("http://localhost:5000/insertteamdata", {
+    fetch("https://invoice-management-2-s4qi.onrender.com/insertteamdata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const handleDelete = async (id) => {
 
   try {
     const res = await fetch(
-      `http://localhost:5000/deleteteamdata/${id}`,
+      `https://invoice-management-2-s4qi.onrender.com/deleteteamdata/${id}`,
       { method: "DELETE" }
     );
 
@@ -120,7 +120,7 @@ const handleDelete = async (id) => {
     
     console.log("Updating:", selectedmember);
 
-    fetch(`http://localhost:5000/updateteamdata/${updatemember.id}`, {
+    fetch(`https://invoice-management-2-s4qi.onrender.com/updateteamdata/${updatemember.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

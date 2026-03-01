@@ -26,7 +26,7 @@ function Courses() {
 
   // ================= FETCH Courses =================
   const fetchcourses = () => {
-    fetch("http://localhost:5000/getcoursedata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getcoursedata")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data.message)) {
@@ -61,7 +61,7 @@ function Courses() {
     id: Number(newcourse.id)   // convert string → integer
   };
     
-    fetch("http://localhost:5000/insertcoursetdata", {
+    fetch("https://invoice-management-2-s4qi.onrender.com/insertcoursetdata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const handleDelete = async (id) => {
 
   try {
     const res = await fetch(
-      `http://localhost:5000/deletecoursedata/${id}`,
+      `https://invoice-management-2-s4qi.onrender.com/deletecoursedata/${id}`,
       { method: "DELETE" }
     );
 
@@ -123,7 +123,7 @@ const handleDelete = async (id) => {
     
     console.log("Updating:", selectedcourses);
 
-    fetch(`http://localhost:5000/updatecoursedata/${updatecourse.id}`, {
+    fetch(`https://invoice-management-2-s4qi.onrender.com/updatecoursedata/${updatecourse.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
