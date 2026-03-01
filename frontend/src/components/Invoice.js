@@ -117,7 +117,7 @@ line();
 };
     const [courses, setcourses] = useState([]);
 const fetchcourses = () => {
-    fetch("http://localhost:5000/getcoursedata")
+    fetch("https://invoice-management-2-s4qi.onrender.com/getcoursedata")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data.message)) {
